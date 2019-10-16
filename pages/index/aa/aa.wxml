@@ -1,0 +1,40 @@
+<view class='Carousel'>
+  <view class="recommend">
+    <view class="swiper-container">
+      <swiper class="swiper" autoplay="auto" interval="3000" duration="1500" bindchange="swiperChange" previous-margin="40px" next-margin="40px" circular="true">
+        <block wx:for="{{slider}}" wx:key="unique">
+          <swiper-item data-url="{{item.image}}">
+            <image class='{{swiperCurrent==item.imgId?"img_current":"img"}}' src="{{item.image}}" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <!-- 指示点 -->
+      <view class="dots">
+        <block wx:for="{{slider}}" wx:key="unique">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- dddddddd -->
+<view class="container">
+    <view class='box'>
+      <view  wx:for="{{navData}}" wx:key="idx" data-index='{{index}}' class="nav-item {{currentTab==index?'active':''}}" bindtap="switchNav">{{item}}</view>
+    </view>
+  <!-- 页面内容 -->
+  <swiper class="tab-box main" current="{{currentTab}}" duration="300" bindchange="switchTab" >
+    <swiper-item wx:for="{{navData}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+      <!-- {{tabItem}} -->
+      <!-- 推荐商品 -->
+        <view class='goods'>
+          <view class='goods_box' bindtap='goods_det' data-id='{{item.id}}' wx:for="{{goods_arry}}" wx:key="">
+            <image src='{{url}}{{item.goods_img[0]}}.thumb.jpg' mode='widthFix'></image>
+            <view class='goods_title'>{{item.goods_name}}</view> 
+            <text class='goods_price'>￥{{item.real_price}}</text>
+          </view>
+        </view>
+    </swiper-item>
+  </swiper>
+</view> 

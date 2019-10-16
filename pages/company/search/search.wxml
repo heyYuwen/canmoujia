@@ -1,0 +1,21 @@
+<view class='searchbox flex_be'>
+  <view class='inputbox flex_sta'>
+    <icon type="search" size="18" color="#53565f"/>
+    <input placeholder='请输入您需要查找的类型' placeholder-class='placeholder'></input>
+  </view>
+  <view class='button'>确定</view>
+</view>
+<view class='centerbox'>
+  <view class='title'>服务项目</view>
+  <view class='forbox flex_wrpsta'>
+    <view class="itembox {{index1==index?'active':''}}" wx:for='{{list}}' wx:key='ss' data-index='{{index}}' bindtap='selet1' >{{item}}</view>
+  </view>
+  <view class='title'>公司规模</view>
+  <view class='forbox flex_wrpsta'>
+    <view class="itembox {{index2==index?'active':''}}" wx:for='{{list2}}' data-index='{{index}}' bindtap='selet2' wx:key='ss'>{{item}}</view>
+  </view>
+  <view class='title'>服务项目</view>
+  <view class='forbox flex_wrpsta'>
+    <view class="itembox {{index3==index?'active':''}}" wx:for='{{list3}}' data-index='{{index}}' bindtap='selet3' wx:key='ss'>{{item}}</view>
+  </view>
+</view>

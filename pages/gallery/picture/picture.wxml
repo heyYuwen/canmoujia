@@ -1,0 +1,16 @@
+<!-- <view class='picture'> -->
+ <swiper circular="true" class='swiper' >
+    <block wx:for="{{banner}}" wx:key="banner"  >
+      <swiper-item class='swiper-item' bindtap='aaa' data-url='{{item.image}}' data-index='{{index}}' >
+        <image src="{{imgurl}}{{item.image}}" class="slideImage"   bindtap='test' />
+        <view class='overopt'></view>
+        <view class='clearimg'>
+          <image src='{{imgurl}}{{item.image}}' mode='widthFix' ></image>
+          
+        </view>
+        <view class='num'>{{index+1}}/{{banner.length}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='btn' bindtap='btn'>装成这样多少钱</view>
+<!-- </view> -->

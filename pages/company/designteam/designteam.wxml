@@ -1,0 +1,46 @@
+<view class='headerbox'>
+  <view class='userimg'>
+    <view class='userbg'>
+      <image src='{{imgurl}}{{userinfo.image}}'></image>
+      <view class='point'>
+        <view class='smallpoint'></view>
+      </view>
+    </view>
+
+  </view>
+  <view class='username'>{{userinfo.name}}</view>
+  <view class='userinfo'>{{userinfo.school}}</view>
+</view>
+<view class='changenav flex_ard'>
+  <view class="navbtn {{index==current?'active':''}}" data-index='{{index}}' bindtap='changenav' wx:for='{{nav}}' wx:key='nab'>{{item}}</view>
+</view>
+<view class='centerbox' wx:if='{{current==0}}'>
+  <view class='title flex_sta'>
+    <view class='bar'></view>
+    <view>{{userinfo.album.length}}个案例</view>
+  </view>
+  <view class='stylebox' wx:for='{{album}}' wx:key='d'>
+    <view class='onetitle flex_sta'>
+      <view class='thefirst'>{{index+1}}</view>
+      <view class='rightcontent'>
+        <view class='designtitle'>{{item.name}}</view>
+        <view class='designinfo'>{{item.title}}</view>
+        <view class='srcoll'>
+          <scroll-view class='inlinescr felx_sta' scroll-x='true' lower-threshold="100" upper-threshold="100" scroll-with-animation="true">
+            <image wx:for='{{item.photos}}' wx:for-item='phone' wx:key='ds' src='{{imgurl}}{{phone.image}}'></image>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='centerbox' wx:if='{{current==1}}'>
+    <view class='title flex_sta'>
+      <view class='bar'></view>
+      <view>关于我</view>
+    </view>
+    <view class='artical'>
+      {{userinfo.intro}}
+    </view>
+</view>
+<view class='applbtn'>免费预约</view>

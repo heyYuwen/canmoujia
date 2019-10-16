@@ -1,0 +1,172 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<!-- 轮播 -->
+<view class='headerbanner'>
+  <swiper autoplay="true" circular="true" indicator-dots="true" indicator-color="rgba(255,255,255, .3)" indicator-active-color="#fff" class='swiper'>
+    <block wx:for="{{companydetail.company_banners}}" wx:key="banner">
+      <swiper-item>
+        <image src="{{imgurl}}{{item.image}}" class="slideImage" mode="center" style="width: 100%" bindtap='test' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='flex_sta company'>
+  <image src='{{imgurl}}{{companydetail.image}}'></image>
+  <view>
+    <view class='compname'>
+      <text>{{companydetail.name}}</text>
+      <view class='comintr flex_sta' bindtap='companyinfo'>
+         <text>更多</text>
+         <image style='width:40rpx;height:30rpx;margin:0rpx;margin-top:10rpx' src='/images/index/more.png'></image>
+      </view>
+    </view>
+    <view class='flex_sta mesgcom'>
+      <view class='anlinum'>案例:{{companydetail.case_num}}</view>
+      <view>信用值:{{companydetail.credit_value}}</view>
+    </view>
+  </view>
+</view>
+<view class='center_box_bottom' >
+  <view class='bigtitltbox' style='width:90%'>
+    <view class='leftbox'>
+      <!-- <view class='barhe'></view> -->
+      <text>特色服务</text>
+    </view>
+    <view class='rightbox' bindtap='allsever'>
+      <text>更多</text>
+      <image src='/images/index/more.png'></image>
+    </view>
+  </view>
+  <view class='flex_be service'>
+    <view class='threebox flex_ar' wx:for='{{companydetail.special_services}}' wx:key='dd'>
+      <icon type='success' size='12' color='#47D485'></icon>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+  <view class='headetitlebox flex_sta' wx:if='{{!companydetail.discount.length==0}}'>
+   
+    <view class='righttext'>优惠详情</view>
+  </view>
+  <view class='youhui ' wx:if='{{!companydetail.discount.length==0}}'>
+    <!-- <view class='topbg flex_sta' >
+      <image src='/images/company/gift.png'></image>
+      <view>{{companydetail.discount[0].title}}</view>
+    </view> -->
+    <view class='continfo'><template is="wxParse" data="{{wxParseData:detail.nodes}}" /></view>
+    <view class='seedetail flex_be' bindtap='app2'>
+      <text>点击领取</text>
+      <image src='/images/company/seedetail.png'></image>
+    </view>
+  </view>
+  <view class='bigtitltbox' style='width:90%' wx:if='{{!companydetail.albums.length==0}}'>
+    <view class='leftbox'>
+      <!-- <view class='barhe'></view> -->
+      <text>装修案例</text>
+    </view>
+    <view class='rightbox' bindtap='zxanli'>
+      <text>更多</text>
+      <image src='/images/index/more.png'></image>
+    </view>
+  </view>
+  <view class='outbox flex_wrp' wx:if='{{!companydetail.albums.length==0}}'>
+      <view class='case_one' wx:for="{{companydetail.albums}}" wx:key="scrollcon" data-item='{{item}}' bindtap='todetail'>
+          <image src='{{imgurl}}{{item.image}}' mode='center'></image>
+          <text>{{item.name}}</text>
+      </view>
+    <!-- <scroll-view class='innerbox'  data-id='{{index}}' scroll-x='true' lower-threshold="100" upper-threshold="100" scroll-with-animation="true">
+      <view class='imgitem' scroll-x="true" wx:for="{{companydetail.albums}}" wx:key="scrollcon" data-item='{{item}}' bindtap='todetail'>
+        <image src='{{imgurl}}{{item.image}}' mode='center'></image>
+        <view class=''></view>
+      </view>
+    </scroll-view> -->
+  </view>
+  <view class='bigtitltbox' wx:if='{{evaluateslist.length!=0}}' style='width:90%'>
+    <view class='leftbox'>
+      <text>业主评价</text>
+    </view>
+    <view class='rightbox' bindtap='allpj'>
+      <text>更多</text>
+      <image src='/images/index/more.png'></image>
+    </view>
+  </view>
+  <view class='userpj' wx:if='{{evaluateslist.length!=0}}'>
+    <view class='userinfo flex_be' wx:for='{{evaluateslist}}' wx:key='d'>
+      <image src='{{imgurl}}{{item.head_img}}'></image>
+      <view class='leftusername flex_cll'>
+        <view class='topuser flex_be'>
+          <view class='username'>{{item.name}}</view>
+          <!-- <view class='time'>{{item.time}}</view> -->
+        </view>
+        <view class='info'>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='bigtitltbox' wx:if='{{contentlist.length!=0}}' style='width:90%'>
+    <view class='leftbox'>
+      <text>设计团队</text>
+    </view>
+    <view class='rightbox' bindtap='desingerteam'>
+      <text>更多</text>
+      <image src='/images/index/more.png'></image>
+    </view>
+  </view>
+  <view class='flex_sta desinger' wx:if='{{contentlist.length!=0}}'>
+    <view class='desingerbox' wx:for='{{contentlist}}' wx:key='d' data-id='{{item.id}}' bindtap='desingerdetail'>
+      <image src='{{imgurl}}{{item.image}}'></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<view class='bottom flex_be'>
+  <view class='app1' bindtap='freemoney'>免费预约</view>
+  <view class='app2' bindtap='app1'>免费报价</view>
+</view>
+<view class='cover_box' bindtap='close' wx:if='{{app1status==1||app1status==2}}'></view>
+<view class='winbox' wx:if='{{app1status==1}}'>
+  <view class='winbox_title'>{{companydetail.name}}</view>
+  <form bindsubmit='tosubmit'>
+    <view class='inputbox flex_sta'>
+      <image src='/images/calculator/user.png'></image>
+      <input placeholder='您的名字' name='username' placeholder-class='placeholder'></input>
+    </view>
+    <view class='inputbox flex_sta'>
+      <image src='/images/calculator/phone.png'></image>
+      <input placeholder='您的手机号' maxlength='11' name='userphone' placeholder-class='placeholder'></input>
+    </view>
+    <button formType="submit" class='button'>免费报价</button>
+  </form>
+</view>
+<view class='winbox2' wx:if='{{app1status==2}}'>
+  <view class='winbox_title'>{{companydetail.name}}为您服务</view>
+  <form bindsubmit='tosubmit'>
+    <view class='inputbox flex_sta'>
+      <image src='/images/calculator/user.png'></image>
+      <input placeholder='您的名字' name='username' placeholder-class='placeholder'></input>
+    </view>
+    <view class='inputbox flex_sta'>
+      <image src='/images/calculator/phone.png'></image>
+      <input placeholder='您的手机号' name='userphone' placeholder-class='placeholder'></input>
+    </view>
+    <view class='flex_sta gift'>
+      <image src='/images/company/gift.png'></image>
+      <view class=''>整装999套：就是其五点半为您服务</view>
+    </view>
+    <button formType="submit" class='button'>一键领取</button>
+  </form>
+  <!-- <view class='gaoxiao'>
+    <view class='scroll2title'>高效图</view>
+  </view>
+
+  <view class='outerbox'>
+    <scroll-view class='innerbox' data-id='{{index}}' scroll-x='true' lower-threshold="100" upper-threshold="100" scroll-with-animation="true">
+      <view class='imgitem imgitem_1' scroll-x="true" wx:for="{{scrollcon}}" wx:key="scrollcon">
+        <image src='/images/index/banner.png'>
+          <view class='img_cover'>
+            <view>金色城市家园刘先生</view>
+            <view>雅居</view>
+          </view>
+        </image>
+
+      </view>
+    </scroll-view>
+  </view> -->
+</view>

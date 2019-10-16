@@ -1,0 +1,63 @@
+@import "/template/pubu/pubu.wxss";
+.changenav {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+   z-index: 20;
+   background: #fff
+}
+.optpage{
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.5);
+  position: fixed;
+  top: 110rpx;
+  left: 0rpx
+}
+.markconare{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+  padding-bottom: 30rpx;
+  position: fixed;
+  top: 100rpx;
+  left: 0rpx;
+  
+}
+.none{
+  width: 100%;
+  height: 500rpx;
+  line-height: 500rpx;
+  font-size: 30rpx;
+  color: #47D485;
+  text-align: center;
+  margin-top: 250rpx
+}
+.one_market{
+  width: 120rpx;
+  height: 60rpx;
+  background: #F4F1F2;
+  border-radius: 30rpx;
+  color: #53565f;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 10rpx;
+  padding: 0 10rpx;
+  margin-bottom: 30rpx
+}
+.active{
+  background: #47D485;
+  color: #fff
+}
+.headerbox{
+    margin-top: 120rpx;
+}
+.hot image{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  
+}

@@ -1,0 +1,130 @@
+.changenav {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+   z-index: 20;
+   background: #fff
+}
+.headerbox{
+  width: 720rpx;
+  height: auto;
+  margin: auto;
+  margin-top: 120rpx;
+ 
+  /* border: 1rpx sienna solid */
+}
+
+.infocon{
+  width: 49%;
+  height: 400rpx;
+  margin-top: 20rpx;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx #e9e9e9;
+  color: rgb(61, 61, 61);
+  border-radius: 12rpx
+}
+.infocon image{
+  width: 348rpx;
+  height: 260rpx;
+
+}
+.bottopt{
+  width: 100%;
+  height: 120rpx;
+  font-size: 24rpx;
+  color:rgb(61, 61, 61);
+  box-sizing: border-box;
+  padding: 10rpx 20rpx
+}
+.stytletitle{
+  font-size: 28rpx;
+  line-height: 50rpx;
+  white-space:nowrap; 
+overflow:hidden; 
+text-overflow:ellipsis;
+}
+.optpage{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 110rpx;
+  left: 0rpx
+}
+.markconare{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  padding-bottom: 30rpx;
+  position: fixed;
+  top: 110rpx;
+  left: 0rpx
+  
+}
+.none{
+  width: 100%;
+  height: 500rpx;
+  line-height: 500rpx;
+  font-size: 30rpx;
+  color: #47D485;
+  text-align: center;
+  margin-top: 250rpx
+}
+.one_market{
+  width: 134rpx;
+  height: 60rpx;
+  background: #F4F1F2;
+  border-radius: 30rpx;
+  color: #555861;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: 18rpx;
+  padding: 0 10rpx;
+  margin-bottom: 30rpx
+}
+.active{
+  background: #47D485;
+  color: #fff
+}
+/* 授权手机号弹框 */
+.logincover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(15, 15, 15, 0.5);
+  z-index: 100
+}
+.loginbox{
+  width: 500rpx;
+  height: 350rpx;
+  background: #fff;
+  margin: auto;
+  margin-top: 260rpx;
+  font-size: 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+  /* padding: 30rpx; */
+  padding-top: 60rpx
+}
+.logincover button{
+   width: 300rpx;
+   height: 60rpx;
+  background: #03b4aa;
+  border-radius: 12rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin: auto;
+  z-index: 22;
+  margin-bottom: 10rpx;
+  font-size: 26rpx
+}
+.boxtext{
+  font-size: 22rpx;
+  color: rgb(209, 212, 214);
+  margin-top: 20rpx;
+  margin-bottom: 50rpx
+}

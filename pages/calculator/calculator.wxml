@@ -1,0 +1,94 @@
+<view class='headerimg'>
+  <image src='/images/calculator/jisuanqibanner@2x.png' mode='widthFix'></image>
+</view>
+
+
+<view class='onetitle'>
+  <view class='topbox'>
+    <!-- 标题 0-->
+    <view class='flex_ar toptitle'>
+       <view class='line'></view>
+       <text>在线计算器</text>
+       <view class='line'></view>
+    </view>
+    <view class='suan'>算一算,找品牌公司，花多少钱合理</view>
+    <view class='pinmu'><image  src='/images/calculator/shuzi.gif'></image></view>
+    <view class='select flex_be'>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>人工费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>材料费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>量房费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>质检费</view>
+      </view>
+    </view>
+    <!-- 表单 -->
+    <form bindsubmit='tosubmit'>
+        <view class='twotitle'>
+          <view class='city'>
+              <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <view class="picker flex_be">
+                  <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+                  <image src='/images/calculator/rightmore.png'></image>
+              </view>
+              
+              </picker>
+          </view>
+          <view class='inputbar '>
+            <input placeholder='您的名字' name='username' placeholder-class='place' value='{{form_v}}'></input>
+          </view>
+          <view class='inputbar '>
+            <input placeholder='您的手机' maxlength='11' type='number' name='phone' placeholder-class='place' value='{{form_v}}'></input>
+          </view>
+          <view class='inputbar'>
+           
+            <input placeholder='房屋面积（㎡）' type='number' name='housemj' placeholder-class='place' value='{{form_v}}'></input>
+          </view>
+          <view class='myhouse'>
+              <view class='shitingwei' bindtap='selectfunction'>{{userselect}}</view>
+          </view>
+          <button formType="submit" class='ljsum'>立即计算</button>
+        </view>
+    </form>
+  </view>
+</view>
+<view class='baojiage'>
+ <image src='/images/calculator/baojia.png' mode='widthFix'></image>
+</view>
+<view class='bottom_text' bindtap='aboutus'>关于我们，了解更多 ></view>
+<view class='cover' wx:if='{{windstatus}}'>
+   <view class='manyover'>
+       <view class='flex_ar toptitle'>
+          <view class='line' style='background:#FF6E1D'></view>
+          <text style='color:#FF6E1D'>您家的装修预算</text>
+          <view class='line' style='background:#FF6E1D'></view>
+       </view>
+       <view class='flex_be kindof'>
+          <view class='room'>
+          <view class="{{index==shicur?'orange':'room_one'}}" wx:for='{{homestyle1}}' wx:key='ds' data-item='{{index}}' bindtap='selectshi'>{{item}}</view>
+          </view>
+          <view class='room'>
+            <view class="{{index==tingcur?'orange':'room_one'}}" wx:for='{{homestyle2}}' wx:key='ds' data-item='{{index}}' bindtap='selectting'>{{item}}</view>
+          </view>
+          <view class='room'>
+             <view class="{{index==weicur?'orange':'room_one'}}" wx:for='{{homestyle3}}' wx:key='ds' data-item='{{index}}' bindtap='selectwei'>{{item}}</view>
+          </view>
+          <view class='room'>
+            <view class="{{index==chucur?'orange':'room_one'}}" wx:for='{{homestyle4}}' wx:key='ds' data-item='{{index}}' bindtap='selectchu'>{{item}}</view>
+          </view>
+          <view class='room'>
+             <view class="{{index==taicur?'orange':'room_one'}}" wx:for='{{homestyle5}}' wx:key='ds' data-item='{{index}}' bindtap='selecttai'>{{item}}</view>
+          </view>
+       </view>
+       <view class='makesure' bindtap='makesure'>确认</view>
+   </view>
+</view>

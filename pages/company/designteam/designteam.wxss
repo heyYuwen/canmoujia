@@ -1,0 +1,176 @@
+.headerbox {
+  width: 360rpx;
+  height: auto;
+  margin: auto;
+  text-align: center
+}
+
+.userimg {
+  width: 260rpx;
+  height: auto;
+  margin: auto;
+}
+
+.userimg {
+  width: 260rpx;
+  height: auto;
+  margin: auto;
+  padding-top: 50rpx;
+  position: relative;
+  text-align: center;
+}
+
+.userimg image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0;
+}
+
+.userbg {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 5rpx;
+}
+
+.point {
+  position: absolute;
+  bottom: 20rpx;
+  right: 50rpx;
+  width: 36rpx;
+  height: 36rpx;
+  background: #f3fbf6;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 7rpx;
+}
+
+.smallpoint {
+  width: 22rpx;
+  height: 22rpx;
+  background: #03b4aa;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 34rpx;
+  color: #03b4aa;
+  margin-top: 20rpx;
+}
+
+.userinfo {
+  font-size: 28rpx;
+  color: #b5b5b5;
+  margin-top: 20rpx;
+}
+.changenav{
+  width: 400rpx;
+  height: 100rpx;
+  margin: auto
+}
+.navbtn{
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border:1rpx solid #47d485;
+  color: #b5b5b5;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx
+}
+.active{
+  background: #47d485;
+  color: #fff
+}
+.centerbox{
+  width: 710rpx;
+  height: auto;
+  margin: auto;
+  margin-bottom: 180rpx
+}
+.title {
+  width: 100%;
+  height: 40rpx;
+  font-size: 34rpx;
+  color: #53565f;
+  font-family: 'PingFang-SC-bold'
+}
+.bar{
+  width: 10rpx;
+  height: 40rpx;
+  background: #03b4aa;
+  margin-right: 30rpx
+}
+.stylebox{
+  width: 660rpx;
+  height: auto;
+  margin-top: 60rpx;
+  margin-left: 20rpx
+}
+.thefirst{
+  width: 50rpx;
+  height: 50rpx;
+  background: #47d485;
+  margin-right: 50rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+
+}
+.rightcontent{
+  width: 600rpx;
+  height: auto
+}
+.designtitle{
+  font-size: 36rpx;
+  margin-bottom: 20rpx
+  
+}
+.designinfo{
+  font-size: 28rpx;
+  color: #b5b5b5
+}
+.srcoll{
+  width: 560rpx;
+  height: auto;
+  margin-top: 50rpx;
+}
+.srcoll image{
+  width: 190rpx;
+  height: 190rpx;
+  margin-right: 20rpx
+}
+.inlinescr{
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.applbtn{
+  width: 660rpx;
+  height: 100rpx;
+  color: #fff;
+  background: #47d485;
+  border-radius: 50rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 50rpx;
+  left: 45rpx
+}
+.artical{
+  text-indent: 30rpx;
+  font-size: 30rpx;
+  color: #54575E;
+  line-height: 50rpx;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx
+}

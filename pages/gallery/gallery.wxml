@@ -1,0 +1,30 @@
+<view class='changenav'>
+  <view class= "box-con {{index==currentindex?'bigfont':''}}" wx:for='{{changenav}}' wx:key='ss' data-index='{{index}}' bindtap='changenav'>
+    <text>{{item.title}}</text>
+    <view wx:if='{{index==currentindex}}' class='bar-bott'></view>
+  </view>
+</view>
+<view class='headerbox flex_wrp'  wx:if='{{contentlist.length>0}}'>
+  <view class='infocon' wx:for='{{contentlist}}' wx:key='ds' data-item='{{item}}' bindtap='todetail'>
+    <image src='{{imgurl}}{{item.image}}' mode='center'></image>
+    <view class='bottopt'>
+      <view class='stytletitle'>{{item.name}}</view>
+      <text>图集共{{item.photos_count}}张</text>
+    </view>
+  </view>
+</view>
+<view class='none' wx:if="{{contentlist.length==0}}">暂无数据</view>
+<!-- 标签 -->
+<view class='optpage' wx:if='{{coverstatus==1}}' bindtap='close'></view>
+<view class='markconare flex_wrpsta' wx:if='{{coverstatus==1}}'>
+  <view class="one_market {{currentmarket1==index?'active':''}}" wx:if='{{currentindex==0}}' wx:for='{{market1}}' data-id='{{item.id}}' wx:key='ma' data-index='{{index}}' bindtap='selectmarket1'>{{item.name}}</view>
+  <view class="one_market {{currentmarket2==index?'active':''}}" wx:if='{{currentindex==1}}' wx:for='{{market2}}' data-id='{{item.id}}' wx:key='ma' data-index='{{index}}' bindtap='selectmarket2'>{{item.name}}</view>
+  <view class="one_market {{currentmarket3==index?'active':''}}" wx:if='{{currentindex==2}}' wx:for='{{market3}}' data-id='{{item.id}}' wx:key='ma' data-index='{{index}}' bindtap='selectmarket3'>{{item.name}}</view>
+</view>
+<view class='logincover' wx:if='{{loginstatus==1}}'>
+  <view class='loginbox'>
+    <view class='canmoujia'>绑定手机号</view>
+    <view class='boxtext'>参谋家需要您授权手机号</view>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号</button>
+  </view>
+</view>

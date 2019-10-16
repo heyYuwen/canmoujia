@@ -1,0 +1,69 @@
+@import "../../../wxParse/wxParse.wxss";
+.artical image{
+  display: block;
+  width: 100% !important;
+
+}
+.toptitle{
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  /* border: 1rpx sienna solid; */
+  margin-bottom: 20rpx
+}
+.life{
+  width: 150rpx;
+  height: 50rpx;
+}
+.centerbox{
+  width: 90%;
+  height: auto;
+  margin: auto
+}
+.smalltitle{
+  font-size: 28rpx;
+  color: #53565f;
+  /* border: 1rpx sienna solid */
+}
+.smalltitle image{
+  width: 26rpx;
+  height: 18rpx;
+  margin: 0rpx 20rpx;
+  margin-top: 10rpx
+}
+.seenumber{
+  width: 150rpx;
+  /* border: 1rpx solid darkblue; */
+  margin-right: 30rpx
+}
+.time{
+  font-size: 24rpx;
+}
+.artical{
+  width: 100%;
+  line-height: 50rpx;
+  text-indent: 20rpx;
+  font-size: 32rpx;
+  color: #585B63;
+  margin-top: 30rpx;
+}
+.articalimg{
+  width: 100%;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx
+}
+.title{
+  font-size: 32rpx;
+  
+}
+.btn{
+  width: 640rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: #47d485;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 30rpx;
+  margin: auto;
+  margin-bottom: 40rpx;
+}

@@ -1,0 +1,58 @@
+.box{
+  width: 710rpx;
+  height: 300rpx;
+  margin: auto;
+  position: relative
+}
+.box image{
+  width: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx
+}
+.coverbox{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+}
+.img{
+  width: 100rpx;
+  height: 100%;
+}
+.coverbox image{
+  width: 45rpx;
+  height: 45rpx;
+  display: block;
+  margin: 50rpx 30rpx;
+}
+.rightbox{
+  width: 600rpx;
+  height: 300rpx;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: left
+}
+.rightbox .title{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 40rpx
+}
+.text{
+  line-height: 52rpx
+}
+.btn{
+  width: 640rpx;
+  height: 100rpx;
+  background: #47D485;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #fff;
+  position: fixed;
+  bottom: 40rpx;
+  left: 55rpx;
+}

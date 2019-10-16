@@ -1,0 +1,56 @@
+<view class='title'>看看这些业主们怎么说</view>
+<view class='bgwit flex_ar'>
+  <view class='leftbox flex_cl'>
+    <view>{{toppj.avgPoint}}</view>
+    <view>综合评分</view> 
+  </view>
+  <view class='centerbar'></view>
+  <view class='rightbox'>
+   <view class='flex_cl'>
+      <view class='flex_sta'>
+        <text>设计评分:</text>
+        <image wx:for='{{design}}' wx:key='de' src='{{item}}' ></image>
+      </view>
+      <view class='flex_sta'>
+        <text>服务评分:</text>
+        <image wx:for='{{sever}}' wx:key='se' src='{{item}}' ></image>
+      </view>
+      <view class='flex_sta'>
+        <text>施工评分:</text>
+        <image wx:for='{{working}}' wx:key='wo' src='{{item}}' ></image>
+      </view>
+   </view>
+  </view>
+</view>
+<!-- <view class='navbtn flex_ar'>
+  <view class="navbox {{index==current?'active':''}} " wx:for='{{nav}}' wx:key='nav' data-index='{{index}}' bindtap='seeall'>{{item.name}} ({{item.num}})</view>
+</view> -->
+<view class='centerbox'>
+  <view class='flex_sta' wx:for='{{evaluateslist}}' wx:key='box'>
+     <image class='userimg' src='{{imgurl}}{{item.head_img}}'></image>
+     <view class='center'>
+       <view class='username'>{{item.name}}</view>
+       <view class='pj flex_wrpsta'>
+        <view class='onepj flex_sta'>
+          <view>设计评分</view>
+          <image  wx:key='de' wx:for='{{item.design_grade}}' src='/images/company/xxyes.png' ></image>
+          <image  wx:key='de' wx:for='{{5-item.design_grade}}' src='/images/company/xxno.png' ></image>
+        </view>
+        <view class='onepj flex_sta'>
+          <view>价格评分</view>
+          <image  wx:key='de' wx:for='{{item.price_grade}}' src='/images/company/xxyes.png' ></image>
+          <image  wx:key='de' wx:for='{{5-item.price_grade}}' src='/images/company/xxno.png' ></image>
+        </view>
+        <view class='onepj flex_sta'>
+          <view>服务评分</view>
+          <image  wx:key='de' wx:for='{{item.service_grade}}' src='/images/company/xxyes.png' ></image>
+          <image  wx:key='de' wx:for='{{5-item.service_grade}}' src='/images/company/xxno.png' ></image>
+        </view>
+       </view>
+     </view>
+     <view class='lastbox flex_cl'>
+       <view class='time'>{{item.time}}</view>
+       <view class='btn'>装修</view>
+     </view>
+  </view>
+</view>

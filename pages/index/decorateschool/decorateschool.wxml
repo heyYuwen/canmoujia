@@ -1,0 +1,31 @@
+<import src="/template/pubu/pubu.wxml" />
+<view class='changenav'>
+  <view class="box-con {{index==currentindex?'bigfont':''}}" wx:for='{{changenav}}' data-id='{{item.id}}' wx:key='ss' data-index='{{index}}' bindtap='changenav'>
+    <text>{{item.name}}</text>
+    <view wx:if='{{index==currentindex}}' class='bar-bott'></view>
+  </view>
+</view>
+<view class='headerbox'>
+ <view class="content">
+  <view class="left">
+    <block class='askcon' wx:for="{{notelist}}" wx:key="">
+      <view wx:if='{{index==0}}' class='hot'><image src='/images/index/hot.png'></image></view>
+      <template is="pubu" data="{{...item,imgurl}}" wx:if="{{index%2==0}}"></template>
+    </block>
+  </view>
+  <view class="right">
+    <block class='askcon' wx:for="{{notelist}}" wx:key="">
+      <template is="pubu" data="{{...item,imgurl}}" wx:if="{{index%2==1}}"></template>
+    </block>
+  </view>
+</view>
+</view>
+
+<!-- 标签 -->
+<view class='optpage' bindtap='close' wx:if='{{coverstatus==1}}'></view>
+<view class='markconare flex_wrpsta' wx:if='{{coverstatus==1}}'>
+  <view class="one_market {{currentmarket1==index?'active':''}}" wx:if='{{currentindex==0}}' wx:for='{{market1}}' wx:key='ma' data-item='{{item}}' data-index='{{index}}' bindtap='selectmarket1'>{{item.name}}</view>
+   <view class="one_market {{currentmarket2==index?'active':''}}" wx:if='{{currentindex==1}}' wx:for='{{market2}}' wx:key='sma' data-item='{{item}}' data-index='{{index}}' bindtap='selectmarket2'>{{item.name}}</view>
+     <view class="one_market {{currentmarket3==index?'active':''}}" wx:if='{{currentindex==2}}' wx:for='{{market3}}' wx:key='msa' data-item='{{item}}' data-index='{{index}}' bindtap='selectmarket3'>{{item.name}}</view>
+</view>
+<view class='none' wx:if="{{notelist.length==0}}">暂无数据</view>

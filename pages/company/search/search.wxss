@@ -1,0 +1,66 @@
+.searchbox{
+  width: 710rpx;
+  margin: auto;
+  height: 150rpx;
+  margin-top: 30rpx
+}
+.inputbox{
+  width: 540rpx;
+  height: 80rpx;
+  background: #F0F0F0;
+  border-radius: 40rpx
+}
+.inputbox icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 20rpx 30rpx
+}
+.inputbox input{
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.placeholder{
+font-size: 28rpx;
+color: #53565f
+}
+.button{
+  width: 120rpx;
+  height: 60rpx;
+  background: #47D485;
+  border-radius: 45rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  margin-top: 15rpx
+}
+.centerbox{
+  width: 700rpx;
+  height: auto;
+  margin: auto;
+
+}
+.title{
+  font-size: 28rpx;
+  color: #53565f;
+  margin-bottom: 20rpx
+}
+.itembox{
+  width: 150rpx;
+  height: 60rpx;
+  border: 1rpx #CCCECD solid;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #14171f;
+  text-align: center;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx
+
+}
+.active{
+  border: 1rpx solid #47D485;
+  color: #47D485
+}

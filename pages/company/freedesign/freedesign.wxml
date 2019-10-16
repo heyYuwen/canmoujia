@@ -1,0 +1,50 @@
+<view class='headerimg'>
+  <image src='/images/company/bkbanner.png' mode='widthFix'></image>
+</view>
+<form bindsubmit='tosubmit'>
+  <view class='aa'>
+    <view class='onetitle'>
+      <view class='topbox'>
+        <view class='toptitle'>
+          <!-- <image src='/images/calculator/titleimg.png'></image> -->
+          免费获取设计方式
+        </view>
+        <view class='formula'>今日已有 <text style='color:#FFBB00'> 320</text> 人成功报价</view>
+        <view class='city'>
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker flex_be">
+                <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+                <image src='/images/calculator/rightmore.png'></image>
+            </view>
+          </picker>
+        </view>
+        <view class='inputbar flex_sta'>
+          <!-- <image src='/images/calculator/user.png'></image> -->
+          <input placeholder='您的名字' placeholder-class='place' name='name' value='{{form_v}}'></input>
+        </view>
+        <view class='inputbar flex_sta'>
+          <!-- <image src='/images/calculator/phone.png'></image> -->
+          <input placeholder='您的手机' type='number' maxlength='11' placeholder-class='place' name='phone' value='{{form_v}}'></input>
+        </view>
+        <button class='ljappay' formType="submit">为您报价</button>
+        
+      </view>
+
+    </view>
+  </view>
+</form>
+<view class='twotitle'>
+  <view class='content1img'>
+     <image src='/images/company/1@2x.png' style='width:80%' mode='widthFix'></image>
+     <image src='/images/company/ctg@2x.png' mode='widthFix'></image>
+  </view>
+  <view class='content2img'>
+      <image src='/images/company/2@2x.png' style='width:70%' mode='widthFix'></image>
+      <image src='/images/company/pktu@2x.png' mode='widthFix'></image>
+  </view>
+  <view class='content3img'>
+       <image src='/images/company/3@2x.png' style='width:80%;margin-bottom:60rpx' mode='widthFix'></image>
+       <image src='/images/company/组248@2x.png' mode='widthFix'> </image>
+  </view>
+  <image src='/images/company/card@2x.png' mode='widthFix' style='display:block; margin:auto;margin-top:30rpx'></image>
+</view>  

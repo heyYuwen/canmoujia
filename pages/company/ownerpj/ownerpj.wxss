@@ -1,0 +1,141 @@
+.title{
+  width: 100%;
+  height: 60rpx;
+  color: #999a9b;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  background: #f5dcd8;
+  box-sizing: border-box;
+  padding-left: 20rpx
+}
+.bgwit{
+  width: 100%;
+  height: 180rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0rpx 30rpx
+}
+.leftbox{
+  width: 150rpx;
+  height: 100%;
+  text-align: center;
+  
+}
+.leftbox :first-child{
+  color: #FF2E2E;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+  /* margin-bottom: 10rpx; */
+  width: 100%
+}
+.leftbox :last-child{
+  color: #53565f;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  text-align: center
+}
+
+.rightbox{
+  width: 500rpx;
+  height: 100%;
+  color: #53565f
+}
+.centerbar{
+  width: 2rpx;
+  height: 60rpx;
+  background: #D8D8D8;
+  margin-top: 70rpx
+}
+.flex_cl :first-child{
+  margin-right: 20rpx
+}
+.flex_cl image{
+  width: 26rpx;
+  height: 26rpx;
+  display: block;
+  margin: 0;
+  margin-top: 16rpx
+}
+.navbtn{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 30rpx
+}
+.navbox{
+  width: 160rpx;
+  height: 60rpx;
+  color: #b5b5b5;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #F0F0F0;
+  border-radius: 10rpx;
+  
+}
+.active{
+  background: #cdcccc;
+  color: #fff
+}
+.centerbox{
+  width: 710rpx;
+  height: auto;
+  margin: auto;
+  /* border: 1rpx solid rebeccapurple */
+}
+.userimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-top: 50rpx
+}
+.center{
+  width: 500rpx;
+  height: 200rpx;
+  /* border: 1rpx gainsboro solid; */
+  box-sizing: border-box;
+  padding-left:20rpx
+}
+.username{
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  margin-bottom: 10rpx
+}
+.pj{
+  width: 100%;
+  /* border: 1rpx sienna solid */
+}
+.onepj{
+  width: 226rpx;
+  height: 40rpx;
+  /* border: 1rpx solid sandybrown; */
+  font-size: 24rpx;
+  color: #53565f
+
+}
+.onepj :first-child{
+  margin-right: 10rpx
+}
+.onepj image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 10rpx
+}
+.time{
+ font-size: 24rpx;
+ color: #b5b5b5;
+ margin-top: 55rpx;
+}
+.btn{
+  width: 80rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  background: #f7b664;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #fff;
+  margin-bottom: 55rpx
+}

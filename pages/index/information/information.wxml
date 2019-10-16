@@ -1,0 +1,17 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class='centerbox'>
+<view class='toptitle'>{{article.title}}</view>
+ <view class='smalltitle flex_sta'>
+   <view class='life'>生活常识</view>
+   <image src='/images/index/see1.png'></image>
+   <view class='seenumber'>{{article.view}}</view>
+   <view class='time'>{{article.updated_at}}</view>
+ </view>
+ <view class='artical'><template is="wxParse" data="{{wxParseData:detail.nodes}}" /></view>
+ <!-- <image class='articalimg' src='/images/index/banner.png' mode='widthFix'></image>
+ <view class='title'>一，什么是正确的计算方式</view>
+ <view class='artical'>参谋家装修平台-中国同城化家居装修招标平台,参谋家动画化的的回复回复电弧焊发泡倒计时福建师范菏泽学院施工方d是减肥护肤好</view>
+ <view class='artical'>参谋家装修平台-中国同城化家居装修招标平台,参谋家动画化的的回复回复电弧焊发泡倒计时福建师范菏泽学院施工方d是减肥护肤好</view>
+ <image class='articalimg' src='/images/index/banner.png' mode='widthFix'></image> -->
+ <view class='btn' bindtap='applay'>立即申请</view>
+</view>

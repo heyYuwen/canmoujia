@@ -1,0 +1,61 @@
+.slideImage{
+  width:100%;
+  height: 800rpx;
+  display: block;
+}
+.picture{
+  /* border: 1rpx sienna solid; */
+  width: 100%;
+  height: auto;
+}
+.swiper{
+  width: 100%;
+  height:800rpx;
+  /* border: 1rpx red solid */
+}
+.swiper-item{
+  width: 100%;
+  height: 800rpx;
+  position: relative
+}
+.clearimg{
+  width: 80%;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 100rpx;
+  left: 75rpx;
+  padding: 15rpx 0rpx
+}
+.clearimg image{
+ width: 95%;
+ display: block;
+ margin: auto
+}
+.overopt{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0,0,0, 0.5)
+}
+.num{
+  font-size: 28rpx;
+  color: rgb(245, 239, 239);
+  text-align: center;
+  margin-top: -50rpx;
+  z-index: 9999
+}
+.btn{
+  width: 100%;
+  height: 110rpx;
+  background: #47D485;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  text-align: center;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  color: #fff
+}

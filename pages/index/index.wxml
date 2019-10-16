@@ -1,0 +1,69 @@
+<import src="/template/pubu/pubu.wxml" />
+<!-- 轮播 -->
+<view class='headerbanner'>
+  <swiper  circular="true" class='swiper' bindchange='aa' current="{{bancurrentindex}}">
+    <block wx:for="{{banner}}" wx:key="banner">
+      <swiper-item class='swiperitem'>
+        <image src="{{imgurl}}{{item.image}}" class="{{index==bancurrentindex?'currentimg':'slideImage'}}" mode="widthFix" style="width: 100%" bindtap='test'  />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 导航按钮 -->
+<view class='navbox'>
+  <view class='navbtn' wx:for='{{nav}}' wx:key='dd' data-index='{{index}}' bindtap='btnnav'>
+    <image src='{{item.img}}'></image>
+    <text>{{item.text}}</text>
+  </view>
+  <button class='navbtn' bindtap='btnnav' class='button' open-type='contact'>
+    <image src='/images/index/the2.png'></image>
+    <text>为您参谋</text>
+  </button>
+</view>
+<!-- 按钮块 -->
+<view class='flex_be'>
+   <image class='left_imgs' src='/images/index/guanggaow@2x.png' bindtap='freedesign'></image>
+   <view class='right_imgs'>
+      <image src='/images/index/jisubaojia@2x.png' bindtap='baojia'></image>
+      <image style='margin-top:10rpx' src='/images/index/zxxt@2x.png' bindtap='school'></image>
+   </view>
+</view>
+<!-- 装修效果图 -->
+<view class='bigtitltbox'>
+  <view class='leftbox'>
+    <!-- <view class='barhe'></view> -->
+    <text>装修效果图</text>
+  </view>
+  <view class='rightbox' bindtap='seemore'>
+    <text>更多</text>
+    <image src='/images/index/more.png'></image>
+  </view>
+</view>
+<view class='change_nav flex_sta'>
+  <view class="box-con {{index==currentindex?'active':''}}" wx:for='{{changenav}}' wx:key='ss' data-item='{{item}}' data-index='{{index}}' bindtap='changenav'>
+    <text>{{item.title}}</text>
+    <view wx:if='{{index==currentindex}}' class='bar-bott'></view>
+  </view>
+</view>
+<swiper class="tab-box main" current="{{currentindex}}"  bindchange="switchTab">
+  <swiper-item wx:for="{{changenav}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+    <view class='goods' wx:for='{{list}}' wx:key='dd' data-item='{{item.photos}}' bindtap='tophonto'>
+      <image src='{{imgurl}}{{item.image}}' mode='scaleToFill'></image>
+      
+        <view class='title'>户型布局：{{item.name}}</view>
+        <view style='font-size:24rpx;margin-top:5px;color:#b1b1b1'>装修案例： {{item.photos_count}}例</view>
+      
+    </view>
+  </swiper-item>
+</swiper>
+
+
+<view class='logincover' wx:if='{{loginstatus==1}}'>
+  <view class='loginbox'>
+    <view class='canmoujia'>参谋家申请获取以下权限</view>
+    <view class='boxtext'>获得你的公开信息（昵称，头像等）</view>
+    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权登录</button>
+  </view>
+</view>
+
+<!-- <view class='load_more'>加载更多...</view> -->

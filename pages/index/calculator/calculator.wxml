@@ -1,0 +1,124 @@
+<view class='headerimg'>
+  <image src='/images/calculator/header.png' mode='widthFix'></image>
+</view>
+<view class='aa'>
+
+<view class='onetitle'>
+  <view class='topbox'>
+    <view class='toptitle'>
+      <image src='/images/calculator/titleimg.png'></image>
+      <view >在线装修计算器</view>
+    </view>
+    <view class='formula'>算一算,找品牌公司,花多少钱合理?</view>
+    <view class='pinmu'><image  src='/images/calculator/shuzi.gif'></image></view>
+    <view class='select flex_be'>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>人工费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>材料费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>量房费</view>
+      </view>
+      <view class='oneselect flex_ar'>
+        <view class='point'></view>
+        <view>质检费</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+</view> 
+<form bindsubmit='tosubmit'>
+  <view class='twotitle'>
+    <view class='lianjei flex_be'>
+      <view class='leftlianjei'><image src='/images/calculator/lianjei.png' mode='widthFix'></image></view>
+      <view class='rightlianjei'><image src='/images/calculator/lianjei.png' mode='widthFix'></image></view>
+    </view>
+    <view class='city'>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+         <view class="picker flex_be">
+            <text>{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+            <image src='/images/calculator/rightmore.png'></image>
+         </view>
+         
+        </picker>
+    </view>
+    <view class='inputbar flex_sta'>
+      <image src='/images/calculator/user.png'></image>
+      <input placeholder='您的名字' name='username' placeholder-class='place' value='{{form_v}}'></input>
+    </view>
+    <view class='inputbar flex_sta'>
+      <image style='width:35rpx;height:40rpx' src='/images/calculator/phone.png'></image>
+      <input placeholder='您的手机' maxlength='11' type='number' name='phone' placeholder-class='place' value='{{form_v}}'></input>
+    </view>
+    <view class='inputbar flex_sta'>
+      <image src='/images/calculator/home.png'></image>
+      <input placeholder='房屋面积（㎡）' type='number' name='housemj' placeholder-class='place' value='{{form_v}}'></input>
+    </view>
+    <view class='myhouse flex_be'>
+      <view class='box-size flex_ar'>
+        <text>室</text>
+        <view class='selectkk flex_be'>
+          <text>{{shi}}</text>
+          <view class='lan'></view>
+          <image src='/images/calculator/more.png' bindtap='selectareas'></image>
+          
+        </view>
+        <view wx:if='{{selectareastatus==1}}' class='selectarea'>
+          <view class='dot-top'></view>
+          <view class='homestyle' wx:for='{{homestyle1}}' wx:key='homestyle' data-index='{{index}}' bindtap='selectresult1'>{{item}}</view>
+        </view>
+      </view>
+      <view class='box-size flex_ar'>
+        <text>厅</text>
+        <view class='selectkk flex_be'>
+          <text>{{ting}}</text>
+          <view class='lan'></view>
+          <image src='/images/calculator/more.png' bindtap='selectarea'></image>
+          
+        </view>
+        <view wx:if='{{selectareastatus==2}}' class='selectarea'>
+          <view class='dot-top'></view>
+          <view class='homestyle' wx:for='{{homestyle2}}' wx:key='homestyle' data-index='{{index}}' bindtap='selectresult2'>{{item}}</view>
+        </view>
+      </view>
+      <view class='box-size flex_ar'>
+        <text>卫</text>
+        <view class='selectkk flex_be'>
+          <text>{{wei}}</text>
+          <view class='lan'></view>
+          <image src='/images/calculator/more.png' bindtap='selectwei'></image>
+          
+        </view>
+        <view wx:if='{{selectareastatus==3}}' class='selectarea'>
+          <view class='dot-top'></view>
+          <view class='homestyle' wx:for='{{homestyle3}}' wx:key='homestyle' data-index='{{index}}' bindtap='selectresult3'>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <button formType="submit" class='ljsum'>立即计算</button>
+  </view>
+  <view class='showbox'>
+    <view class='title flex_be'>
+      <view class='aa'>
+        <view class='cbar c1'></view>
+        <view class='dbar d1'></view>
+      </view>
+      <view class='aatext'>效果展示</view>
+      <view class='aa'>
+        <view class='cbar'></view>
+        <view class='dbar'></view>
+      </view>
+    </view>
+    <view class='showimg' wx:for='{{homestyle}}' wx:key='s'>
+      <image src='/images/calculator/header.png' ></image>
+      <view class='top-left-r'></view>
+      <view class='bot-right-r'></view>
+    </view>
+  </view> 
+</form>

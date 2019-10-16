@@ -1,0 +1,29 @@
+<view class='headetitlebox flex_sta'>
+  <view class='leftbar'></view>
+  <view class='righttext'>设计师</view>
+</view>
+<view wx:for='{{designlist}}' wx:key='d'>
+  <view class='flex_sta userheader'>
+    <view class='img'>
+      <image src='{{imgurl}}{{item.image}}' data-id='{{item.id}}' bindtap='todetail'></image>
+      <view class='point'></view>
+    </view>
+    <view class='username flex_cll'>
+      <view>{{item.name}}</view>
+      <view class='zhize flex_sta'>
+        <view class='yellow'></view>
+        <view>{{item.school}}</view>
+      </view>
+    </view>
+
+  </view>
+  <view class='outerbox'>
+    <scroll-view class='innerbox'  data-id='{{index}}' scroll-x='true' lower-threshold="100" upper-threshold="100" scroll-with-animation="true">
+      <view class='imgitem' scroll-x="true" wx:for="{{item.album}}"  wx:key='item' bindtap='todetail' data-item='{{item}}'>
+        <image src='{{imgurl}}{{item.image}}' ></image>
+        <!-- <view class=''>{{items.name}}</view> -->
+      </view>
+      <!-- <view wx:if="item.album.length==0">该设计师暂无作品</view> -->
+    </scroll-view>
+  </view>
+</view>

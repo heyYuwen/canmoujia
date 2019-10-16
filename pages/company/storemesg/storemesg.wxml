@@ -1,0 +1,23 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='headertop'>
+ <image class='headerimg' src='/images/company/header.png' mode='widthFix'>
+  <view class='companyimg'>
+    <image  src='/images/company/company.png'></image>
+    <view>{{title}}</view>
+  </view>
+ </image>
+ 
+</view>
+<view class='centerbox'>
+  <view class='title flex_sta'>
+    <view class='sbar'></view>
+    <view>关于{{title}}</view>
+  </view>
+  <view  class='message'>
+    <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+  </view>
+  
+   <view class='applybtn' bindtap='applay' wx:if='{{applystatus==1}}'>立即申请</view>
+   <!-- 预约 -->
+   <view class='applybtn2' wx:if='{{applystatus==2}}'>您已申请</view>
+</view>

@@ -1,0 +1,208 @@
+.flex_be{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.toptop{
+  margin: auto;
+}
+.headersearch{
+  width: 580rpx;
+  height: 80rpx;
+  background: #F0F0F0;
+  border-radius: 12rpx;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  line-height: 80rpx
+}
+.sure{
+  width: 120rpx;
+  height: 70rpx;
+  border-radius:12rpx;
+  text-align: center;
+  line-height: 70rpx;
+  background: #47d485;
+  color: #fff;
+  font-size: 26rpx;
+  margin: 0;
+  margin-top: 34rpx
+
+}
+.mycity{
+  padding:0rpx 10rpx 0rpx 30rpx;
+  color: #53D58A;
+  font-size: 22rpx
+}
+.mycity image{
+  width: 20rpx;
+  height: 13rpx;
+  display: block;
+  
+  margin: 0rpx 10rpx;
+  margin-top: 35rpx;  
+}
+.headersearch input{
+  width: 400rpx;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #000
+}
+.listbox{
+  width: 656rpx;
+  height: auto;
+  margin: auto;
+  margin-top: 10rpx;
+  margin-bottom: 50rpx
+}
+.plao{
+  color: #53565f;
+  font-size: 28rpx
+}
+.srcalimg{
+  margin-top: 20rpx
+}
+.srcalimg image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.compname{
+  font-size: 32rpx;
+  margin-top: 10rpx
+}
+.mesgcom{
+  width: 500rpx;
+  font-size: 28rpx;
+  color: #60636B;
+  margin-top: 20rpx
+}
+.anlinum{
+  margin-right: 30rpx
+}
+.showlist{
+  margin-top: 30rpx
+}
+.showlist :last-child{
+  margin-right: 0rpx
+}
+.showimg{
+  width: 220rpx;
+  height: 260rpx;
+  border-radius: 20rpx;
+  position: relative;
+  margin-right: 18rpx;
+}
+.showimg image{
+  width: 220rpx;
+  height: 260rpx;
+  border-radius: 10rpx;
+  z-index: 10;
+  position: absolute;
+}
+.greenborder1{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  top: -4rpx;
+  left: -4rpx;
+  background: #47d485;
+  opacity: 0.6;
+  z-index: 5
+}
+.greenborder2{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  bottom: -4rpx;
+  right: -4rpx;
+  background: #47d685;
+  opacity: 0.6;
+  z-index: 5
+}
+.city_cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(20, 20, 20, 0.6);
+  z-index: 100
+}
+.city_box{
+  width: 600rpx;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: -600rpx;
+  background: #f3fbf6;
+  z-index: 200
+}
+.centerbox{
+  width: 500rpx;
+  height: auto;
+  margin-left: 30rpx;
+
+}
+.title{
+  font-size: 28rpx;
+  color: #53565f;
+  margin-bottom: 20rpx
+}
+.itembox{
+  width: 140rpx;
+  height: 56rpx;
+  border: 1rpx #CCCECD solid;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #14171f;
+  text-align: center;
+  line-height: 56rpx;
+  margin-right: 15rpx;
+  margin-bottom: 20rpx
+
+}
+.itembox2{
+  width: auto;
+  padding: 0rpx 15rpx;
+  height: 56rpx;
+  border: 1rpx #CCCECD solid;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #14171f;
+  text-align: center;
+  line-height: 56rpx;
+  margin-right: 15rpx;
+  margin-bottom: 20rpx
+}
+.active{
+  border: 1rpx solid #47D485;
+  color: #47D485
+}
+.a_none{
+  width: 100%;
+  height: 200rpx;
+  color: #53D58A;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 200rpx;
+}
+.left_imgs{
+  width: 448rpx;
+  height: 316rpx
+}
+
+.right_imgs{
+  width: 204rpx;
+  /* height: 15 */
+}
+.right_imgs image{
+  width: 100%;
+  height: 156rpx;
+  display: block;
+  
+}

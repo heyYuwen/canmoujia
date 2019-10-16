@@ -1,0 +1,126 @@
+/**app.wxss**/
+page{
+  background: #ffffff
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.flex_be{
+  display: flex;
+  justify-content: space-between
+}
+.flex_sta{
+  display: flex;
+  justify-content: flex-start
+}
+.flex_cll{
+  display: flex;
+  flex-direction: column;
+
+}
+.flex_ar{
+  display: flex;
+  justify-content: space-around
+}
+.flex_wrp{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+.flex_wrpsta{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap
+}
+.flex_cl{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column
+}
+/* 选项卡样式 */
+.changenav{
+  width: 100%;
+  height: 70rpx;
+  /* border: 1rpx sienna solid ; */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40rpx
+}
+.box-con{
+  width: 220rpx;
+  height: 50rpx;
+  /* border: 1rpx dodgerblue solid; */
+  text-align: center;
+  line-height:50rpx ;
+  font-size: 30rpx;
+  color: #53565f
+}
+.bar-bott{
+  width:50rpx;
+  height: 4rpx;
+  background: #58df9e;
+  margin: auto;
+  margin-top: 5rpx;
+  border-radius: 2rpx
+}
+.bigfont{
+  font-size: 34rpx;
+  color: #14171f;
+  /* font-weight: bold */
+}
+/* 更多标题 */
+.bigtitltbox{
+  width: 630rpx;
+  margin: auto;
+  height: 60rpx;
+  /* border: 1rpx sienna solid; */
+  margin-top:80rpx;
+  display: flex;
+  /* flex-flow: column wrap; */
+  justify-content: space-between
+}
+.leftbox{
+  width: 300rpx;
+  height: 60rpx;
+  /* border: 1rpx skyblue solid; */
+  display: flex;
+  justify-content: start;
+  line-height: 60rpx;
+  font-size: 34rpx
+}
+.rightbox{
+  width: 112rpx;
+  height:60rpx;
+  /* border: 1rpx sienna solid; */
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  font-size: 24rpx;
+  color: #60D791;
+  line-height: 60rpx;
+  box-sizing: border-box;
+  padding-left: 15rpx
+}
+.rightbox image{
+  width: 40rpx;
+  height: 30rpx;
+  display: block;
+  margin-right: 10rpx;
+  margin-top: 15rpx
+}
+.barhe{
+  width: 12rpx;
+  height: 45rpx;
+  background: #03B4AA;
+  margin-right: 20rpx;
+  margin-top: 7rpx
+}
+.more{
+  width: 120
+}

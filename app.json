@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/gallery/gallery",
+    "pages/company/company",
+    "pages/calculator/calculator",
+    "pages/company/commesg/commesg",
+    "pages/company/store/store",
+    "pages/company/storemesg/storemesg",
+    "pages/gallery/picture/picture",
+    "pages/company/freedesign/freedesign",
+    "pages/index/information/information",
+    "pages/index/decorateschool/decorateschool",
+    "pages/index/calculator/calculator",
+    "pages/company/search/search",
+    "pages/company/designteam/designteam",
+    "pages/company/appointment/appointment",
+    "pages/company/teseservice/teseservice",
+    "pages/company/ownerpj/ownerpj",
+    "pages/company/team/team",
+    "pages/index/aa/aa"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "参谋家",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#3EDD94",
+     "backgroundColor":"#ffffff",
+     "borderStyle":"white",
+    "list": [
+      {
+        "iconPath": "images/tabbar/home-icon-2.png",
+        "selectedIconPath": "images/tabbar/home-icon-1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/tabbar/cart-icon-1.png",
+        "selectedIconPath": "images/tabbar/cart-icon-2.png",
+        "pagePath": "pages/company/company",
+        "text": "装修公司"
+      },
+      {
+        "iconPath": "images/tabbar/shop-icon-1.png",
+        "selectedIconPath": "images/tabbar/shop-icon-2.png",
+        "pagePath": "pages/gallery/gallery",
+        "text": "图库"
+      },
+      
+      {
+        "iconPath": "images/tabbar/me-icon-1.png",
+        "selectedIconPath": "images/tabbar/me-icon-2.png",
+        "pagePath": "pages/calculator/calculator",
+        "text": "计算器"
+      }
+    ]
+  }
+}

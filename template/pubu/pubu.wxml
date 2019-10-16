@@ -1,0 +1,24 @@
+<template name='pubu'>
+  <view class="item" data-item='{{url}}' data-id='{{id}}'  bindtap='todetail'>
+    <image class="item-img" src="{{imgurl}}{{picture}}" mode="widthFix"></image>
+    <view class="item-title-box">
+      <view class='infobox'>
+      <view class='asktitle'> {{title}}</view>
+      <view class='see flex_be'>
+        <view class='askleft flex_be'>
+           <image src='/images/index/ask.png'></image>
+           <view>免费咨询</view>
+        </view>
+        <view class='askright flex_ar'>
+           <image src='/images/index/see1.png'></image>
+           <view>{{view}}</view>
+        </view>
+      </view>
+    </view>
+
+    </view>
+   
+  </view>
+
+</template>
+

@@ -1,0 +1,20 @@
+<image src='/images/company/appbg.png' mode='widthFix'>
+  <view class='center'>
+    <form bindsubmit='tosubmit'>
+      <input placeholder='请输入您的名字' placeholder-class='placeholder' name='username' value='{{form_v}}'></input>
+      <input placeholder='请输入您的手机号码' maxlength="11" type='number' placeholder-class='placeholder' value='{{form_v}}' name='phone'></input>
+      <input placeholder='请输入您所在的城市' placeholder-class='placeholder' name='city' value='{{form_v}}'></input>
+      <button formType="submit" class='btn'>提交申请</button>
+    </form>
+
+  </view>
+  <view class='cover' wx:if='{{coverstatus==1}}'>
+    <view class='coverstatus'>
+      <view class='box-string'>
+        <view class='windowtitle'>提示</view>
+        <view class='widcontent'>您已预约成功</view>
+        <view class='makesure' bindtap='makesure'>确定</view>
+      </view>
+    </view>
+  </view>
+</image>

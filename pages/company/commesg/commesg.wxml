@@ -1,0 +1,31 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<!-- <view class='headertop'>
+ <image src='/images/company/header.png' mode='widthFix'></image>
+</view>
+
+  <view class='title flex_sta'>
+    <view class='sbar'></view>
+    <view>关于参谋家</view>
+  </view>
+  <view class='message'>
+    参谋家装修平台-中国同城化家居中装修招标平台,参谋家装修网汇聚全国众多规模桩子公司.单季度返回大湖湾时代花园电话本 都不是过渡语平台-中国同城化家居中装修招标平台
+  </view>
+  <view class='boldtitle'>营业时间:</view>
+  <view class='infomation'>周一到周六,每天9：00-22：00</view>
+  <view class='boldtitle'>接单范围:</view>
+  <view class='infomation'>江岸区,汉阳区，武昌区,新洲区,硚口区,江夏区,洪山区,江南区</view>
+  <view class='boldtitle'>承接价位:</view>
+  <view class='infomation'>3万以下,3-5万,5-8万,8-12万</view>
+   <view class='boldtitle'>公司规模:</view>
+   <view class='infomation'>一家门店/15-30人设计团队/30支以上施工队伍</view>
+   <view class='boldtitle'>装后服务:</view>
+   <view class='infomation'>参与参谋家装修保障一个工作日内给予回复</view> -->
+   <view class='centerbox'>
+   <view>
+    <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+   </view>
+   <view class='applybtn' bindtap='applay' wx:if='{{applystatus==1}}'>立即申请</view>
+   
+   <!-- 预约 -->
+   <view class='applybtn2' wx:if='{{applystatus==2}}'>您已申请</view>
+</view>

@@ -1,0 +1,82 @@
+.Carousel{
+  /* margin-top: 49px;
+  background-color: #fff; */
+}
+.swiper-container{
+  position: relative;
+}
+.swiper-container .swiper{
+  padding-top: 8px;
+  height: 380rpx;
+  text-align: center;
+}
+swiper-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.swiper-container .swiper .img{
+  width: 88%;
+  height: 88%;
+  border-radius: 10px;
+}
+.img_current{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  margin:0rpx;
+  transition-duration:30ms
+}
+.swiper-container .dots{
+  position: absolute;
+  right: 40rpx;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot{
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0 10rpx;
+  border-radius: 50%;
+  background: #fff;
+  transition: all .6s;
+  font: 300 18rpx/28rpx "microsoft yahei";
+  text-align: center;
+}
+.swiper-container .dots .dot.active{
+  background: #f80;
+  color:#fff;
+}
+/* sssssssssssss */
+.box{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center
+}
+.nav-item {
+  width: 150rpx;
+  font-size: 28rpx;
+  color:#999;
+  margin-right: 30rpx
+}
+.container{
+  width: 100%;
+  height: 500rpx
+}
+.active{
+  color: #f80
+}
+.goods{
+  width: 100%;
+  height: 200rpx;
+  border: 1rpx solid darkblue
+}
+.tab-box{
+    width: 100%;
+    margin-top: 100rpx;
+    height: 100%;
+    background: red
+}

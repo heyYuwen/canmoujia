@@ -1,0 +1,11 @@
+<view class='box' wx:for='{{list}}' wx:key='dd'>
+ <image src='/images/company/severbg.png' mode='widthFix'></image>
+ <view class='coverbox flex_sta'>
+    <view class='img'><image src='/images/company/yes.png'></image></view>
+    <view class='rightbox flex_cll'>
+       <view class='title'>{{item.title}}</view>
+       <view class='text'>{{item.content}}</view>
+    </view>
+ </view>
+</view>
+<view class='btn' bindtap='btn'>免费预约</view>

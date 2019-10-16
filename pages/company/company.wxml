@@ -1,0 +1,70 @@
+<form bindsubmit='tosubmit'>
+  <view class='flex_ar toptop'>
+    <view class='headersearch flex_sta'>
+      <view class='mycity flex_ar' bindtap='morecity'>
+        <view>{{address}}</view>
+        <image src='/images/company/city.jpg'></image>
+      </view>
+      <view style='color:#cbcbcb'>|</view>
+      <input placeholder='请输入您需要查找的城市' maxlength='8' name='searchcity' placeholder-class='plao'></input>
+    </view>
+    <button formType="submit" class='sure'>确认</button>
+  
+</view>
+</form>
+<view class='changenav'>
+  <view class="box-con {{index==currentindex?'bigfont':''}}" wx:for='{{changenav}}' wx:key='ss' data-index='{{index}}' bindtap='changenav'>
+    <text>{{item}}</text>
+    <view wx:if='{{index==currentindex}}' class='bar-bott'></view>
+  </view>
+</view>
+<!-- 公司列表 -->
+<view class='listbox' data-item='{{item}}' bindtap='todetail' wx:for='{{companylist}}' wx:key='w'>
+  <view class='flex_be' style=' border-radius: 10rpx; overflow: hidden'>
+     <image class='left_imgs' mode='scaleToFill' src='{{imgurl}}{{item.albums[0].image}}'></image>
+     <view class='right_imgs'>
+        <image src='{{imgurl}}{{item.albums[1].image}} ' mode='scaleToFill'></image>
+        <image src='{{imgurl}}{{item.albums[2].image}}' style='margin-top: 5rpx' mode='scaleToFill'></image>
+     </view>
+  </view>
+  <view class=' srcalimg flex_sta'>
+    <image src='{{imgurl}}{{item.image}}'></image>
+    <view>
+      <view class='compname'>{{item.name}}</view>
+      <view class='flex_sta mesgcom'>
+        <view class='anlinum'>案例:{{item.case_num}}</view>
+        <view>信用值:{{item.credit_value}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='showlist flex_sta'>
+    <view class='showimg' wx:for='{{item.albums}}'  wx:key='w' wx:if='{{index<=2}}'>
+      <image src='{{imgurl}}{{item.image}}' mode='center'></image>
+      <view class='greenborder1'></view>
+      <view class='greenborder2'></view>
+    </view>
+    <view class='a_none' wx:if="{{item.albums==''}}">暂无案例</view>
+  </view> -->
+</view>
+<!-- 城市列表 -->
+<view class='city_cover' wx:if='{{windstatus==1}}' bindtap='closewind'></view>
+<view class='city_box' wx:if='{{windstatus==1}}' animation="{{animationData}}">
+  <view class='centerbox'>
+    <view class='title'>根据您的定位地址</view>
+    <view class='forbox flex_wrpsta'>
+      <view class="itembox  active">{{address}}</view>
+    </view>
+  </view>
+  <view class='centerbox'>
+    <view class='title'>当前搜索的城市</view>
+    <view class='forbox flex_wrpsta'>
+      <view class="itembox2 active">{{searchcity}}</view>
+    </view>
+  </view>
+  <view class='centerbox'>
+    <view class='title'>热门城市</view>
+    <view class='forbox flex_wrpsta'>
+      <view class="itembox {{index3==index?'active':''}}" wx:for='{{list3}}' wx:key='ss' data-item='{{item}}' data-index='{{index}}'  bindtap='selet1'>{{item.name}}</view>
+    </view>
+  </view>
+</view>  
